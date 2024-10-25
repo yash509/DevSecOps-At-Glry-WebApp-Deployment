@@ -291,7 +291,7 @@ pipeline {
         stage('Deploy to Docker Container'){
             steps{
                 //dir('BMI Calculator (JS)') {
-                    sh "docker run -d --name at-glry -p 5000:5000 ${IMAGE_NAME}:${TAG}" 
+                    sh "docker run -d --name at-glry -p 5000:80 ${IMAGE_NAME}:${TAG}" 
                 //}
             }
         }
